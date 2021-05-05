@@ -1,0 +1,37 @@
+# 教程
+https://www.bilibili.com/video/av44544186/
+https://www.bilibili.com/video/av85246440
+
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+npm 源在国内网络有时不稳定，因此使用 cnpm 更为稳妥，官方地址：http://npm.taobao.org
+
+# git的部署工具：hexo-deployer-git插件包
+cnpm install --save hexo-deployer-git
+
+npm i hexo-renderer-swig
+
+# 配置config文件
+deploy:
+  type: 'git'
+  repo: https://github.com/fxb577328725/fxb577328725.github.io.git
+
+
+# 下载主题
+git clone https://github.com/iissnan/hexo-theme-next themes/next
+
+# 本地搜索
+npm install hexo-generator-searchdb --save
+
+# 置顶操作
+npm uninstall hexo-generator-index --save
+npm install hexo-generator-index-pin-top --save
+然后在文件中设置：top: true
+
+# 图片
+把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true
+npm install hexo-asset-image --save
+npm install https://github.com/CodeFalling/hexo-asset-image --save
+
+# 链接
+npm install hexo-abbrlink --save
+https://blog.csdn.net/lxb_wyf/article/details/109137006
